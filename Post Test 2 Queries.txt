@@ -1,0 +1,14 @@
+1.select *  from emp a inner join department b on a.dept_no=b.dept_no where(salary>20000) and location='MUMBAI';
+2.create table emp12(emp_id number(4)not null,last_name varchar2(30)not null,first_name varchar2(30),dept_id number(2));
+  insert into emp12 values(1234,'mishra','delhi',20);
+  insert into emp12 values(123,'sachin','qwerty',26);
+  insert into emp12 values(1234,'sachin','whali',24);
+  insert into emp12 values(1203,'sachin','qwerty',27);
+  insert into emp12 values(1209,'sachin','qwerty',27);
+  select count(distinct dept_id) as count from emp12 where last_name='sachin';
+
+3.SELECT FIRST_NAME, HIRE_DATE FROM EMPLOYEES WHERE JOB_ID IN ('IT_PROG', 'SA_MAN');
+
+4.SELECT DEPARTMENT_ID FROM EMPLOYEES WHERE COMMISSION_PCT IS NOT NULL GROUP BY DEPARTMENT_ID HAVING COUNT(COMMISSION_PCT)>5;
+
+5.SELECT * FROM EMPLOYEES WHERE TO_CHAR(HIRE_DATE, 'MON')= 'MAY';
